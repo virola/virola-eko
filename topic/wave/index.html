@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS波浪效果</title>
+<link rel="stylesheet" href="bubble.css">
+</head>
+<style>
+.box {
+    width: 332px;
+    height: 656px;
+    border-radius: 39px;
+    background: #242021;
+    overflow: hidden;
+    position: relative;
+    font-family: "微软雅黑", "YaHei", "黑体", Tahoma, Helvetica, arial, sans-serif;
+}
+.in-box {
+    width: 304px;
+    height: 540px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin: -270px auto auto -152px;
+    background: #f0f0f0;
+}
+.wave-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #22ACBE;
+    height: 50%;
+    -webkit-transition: height .3s;
+    -o-transition: height .3s;
+    transition: height .3s;
+    /*-webkit-animation: go-up 6s linear both;
+    -o-animation: go-up 6s linear both;
+    animation: go-up 6s linear both;*/
+    
+}
+/*水位上涨*/
+@-webkit-keyframes go-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+@-o-keyframes go-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+@-moz-keyframes go-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+@keyframes go-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+
+/*气泡特效*/
+.bubbles {
+    position: absolute;
+    left: 25%;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: .5px solid rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 2px rgba(255, 255, 255, .6) inset, -1px 1px 2px -1px rgba(0, 204, 255, .1);
+    
+    -webkit-animation: bubbles 1s .5s ease-in both infinite;
+    -o-animation: bubbles 1s .5s ease-in both infinite;
+    animation: bubbles 1s .5s ease-in both infinite;
+}
+.bubbles:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    margin-top: 25px;
+    -webkit-animation: bubbles 1.1s .6s ease-in both infinite;
+    -o-animation: bubbles 1.1s .6s ease-in both infinite;
+    animation: bubbles 1.1s .6s ease-in both infinite;
+}
+.bubbles:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    margin-top: 50px;
+    -webkit-animation: bubbles 1.2s .7s ease-in both infinite;
+    -o-animation: bubbles 1.2s .7s ease-in both infinite;
+    animation: bubbles 1.2s .7s ease-in both infinite;
+}
+.bubbles:nth-child(4) {
+    width: 15px;
+    height: 15px;
+    margin-top: 35px;
+    -webkit-animation: bubbles 1.1s .5s ease-in both infinite;
+    -o-animation: bubbles 1.1s .5s ease-in both infinite;
+    animation: bubbles 1.1s .5s ease-in both infinite;
+}
+
+</style>
+<body>
+<div class="box">
+<div class="in-box">
+    <!-- wave container start -->
+    <section class="wave-box">
+        <i class="bubbles"></i>
+        <i class="bubbles"></i>
+        <i class="bubbles"></i>
+        <i class="bubbles"></i>
+    </section>
+    
+</div>
+</div>
+
+</body>
+</html>

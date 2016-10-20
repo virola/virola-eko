@@ -1,0 +1,1 @@
+define(function(){var n={};return n.init=function(){new Swipe($("#slide")[0],{})},n});

@@ -1,0 +1,64 @@
+body, div, p, h1, h2, h3, h4, input, textarea {
+    margin: 0;
+    padding: 0;
+    color: #453726;
+    font-size: 14px;
+    font-family: "Merriweather Sans","Hiragino Sans GB", Consolas, "Microsoft Yahei",sans-serif;
+}
+
+div, p, h1, h2, h3, h4 {
+    font-size: inherit;
+}
+
+input, textarea {
+    color: #444;
+}
+
+input.small {
+    width: 60px;
+}
+
+.example, .source {
+    padding: 2em;
+}
+
+section {
+    border-bottom: 1px solid #abc;
+}
+
+.example p {
+    margin: 1.5em 0;
+}
+
+.result {
+    border: 1px solid #8BA;
+}
+
+textarea.result {
+    width: 90%;
+    height: 100px;
+}
+
+.code {
+    border: 1px solid #ddd;
+}
+
+#process {
+    font-size: 12px;
+    max-height: 300px;
+    overflow: auto;
+    width: 100%;
+}
+#process p {
+    font-size: 12px;
+    margin: .5em 0;
+    color: #3fadef;
+}
+#process p em {
+    font-weight: bold;
+    color: #666;
+}
+#final {
+    padding: 0 1em;
+}
+

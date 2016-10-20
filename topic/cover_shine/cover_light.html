@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>css3 cover light</title>
+
+<style type="text/css">
+.cover {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.cover img {
+    display: block;
+}
+
+.cover .light {
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 90px;
+    height: 90px;
+
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    -webkit-transition: 0s;
+    transition: 0s;
+}
+
+.cover:hover .light {
+    left: 120px;
+    transition: 0.5s;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#list li {
+    width: 90px;
+    margin: 0 34px 15px 0;
+    float: left;
+    text-align: center;
+}
+
+#list:after {
+    content: ' ';
+    visibility: hidden;
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+}
+
+</style>
+
+</head>
+<body>
+<section class="example">
+    <h1>CSS3光影效果示例(from 百度音乐)</h1>
+    <article>
+        <ul id="list">
+            <li>
+                <div class="cover">
+                    <img src="./img/test_img.jpg" >
+                    <i class="light"></i>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img src="./img/test_img.jpg" >
+                    <i class="light"></i>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img src="./img/test_img.jpg" >
+                    <i class="light"></i>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img src="./img/test_img.jpg" >
+                    <i class="light"></i>
+                </div>
+            </li>
+        </ul>
+    </article>
+</section>
+
+
+</body>
+</html>

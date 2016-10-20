@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>test cpu</title>
+</head>
+<body>
+<div id="res"></div>
+<script>
+var res = {};
+var d1 = new Date();
+
+setTimeout(function () {
+    var d2 = new Date();
+    res.t = d2 - d1;
+
+    console.log(res.t);
+
+    document.getElementById('res').innerHTML = res.t + ' ms';
+}, 50);
+</script>
+</body>
+</html>

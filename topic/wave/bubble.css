@@ -1,0 +1,73 @@
+/*气泡上浮效果*/
+@-webkit-keyframes bubbles {
+    0% {
+        top: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -ms-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -o-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+    }
+    100% {
+        top: -20%;
+        opacity: 1;
+        -webkit-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -ms-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -o-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+    }
+}
+@-o-keyframes bubbles {
+    0% {
+        top: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -ms-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -o-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+    }
+    100% {
+        top: -20%;
+        opacity: 1;
+        -webkit-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -ms-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -o-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+    }
+}
+@-moz-keyframes bubbles {
+    0% {
+        top: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -ms-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -o-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+    }
+    100% {
+        top: -20%;
+        opacity: 1;
+        -webkit-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -ms-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -o-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+    }
+}
+@keyframes bubbles {
+    0% {
+        top: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -ms-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        -o-transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+        transform: rotateZ(0deg) translate3d(5%, 5%, 0) rotateZ(0deg) scale(0.2, 0.2) skew(0, 5deg);
+    }
+    100% {
+        top: -20%;
+        opacity: 1;
+        -webkit-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -ms-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        -o-transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+        transform: rotateZ(360deg) translate3d(-5%, 5%, 0) rotateZ(-360deg) scale(1.5, 1.5) skew(0, 5deg);
+    }
+}

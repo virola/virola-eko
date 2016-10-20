@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>magazine</title>
+<meta name="keywords" content="magazine" />
+<meta name="description" content="magazine" />
+<link rel="stylesheet" type="text/css" href="asset/css/main.css">
+</head>
+<body>
+
+<div class="main">
+    <div id="slide" class="swipe">
+        <div class="swipe-wrap" id="content"></div>
+    </div>
+</div>
+
+<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-6/esl.min.js"></script>
+<script src="asset/swipejs/swipe.min.js"></script>
+<script>
+    require.config({
+        baseUrl: 'asset/js',
+        paths: {
+            jquery: 'http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194'
+        },
+        urlArgs: 'v=20141120'
+    });
+
+    require(['util', 'data', 'jquery'], function (util, data, $) {
+        data.render({
+            url: 'mock/data.json'
+        }, function () {
+            require(['main'], function (main) {
+                main.init();
+            });
+
+            util.weixin.init(data.getShareData());
+        });
+    });
+</script>
+</body>
+</html>

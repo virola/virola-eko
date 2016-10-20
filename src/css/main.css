@@ -1,0 +1,308 @@
+/**
+* index.css
+*/
+/** Frame Related **/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #66CCFF;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 2px 2px 0 #64B1C6;
+    font-size: 14px;
+    font-family: "Merriweather Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    line-height: 1.5;
+}
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+nav ul {
+    font-size: 24px;
+    padding: 20px;
+}
+nav li {
+    display: inline;
+    font-weight: normal;
+}
+a {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #85DCFB;
+}
+.break {
+    color: #D2EDF7;
+    padding: 0 10px;
+}
+
+/** Font Related **/
+@font-face {
+    font-family: KristonITC;
+    src: url("../../asset/font/kriston.ttf");
+}
+@font-face {
+    font-family: QuillineScriptThin;
+    src: url("../../asset/font/quilline.TTF");
+}
+.f20 {
+    font-size: 20px;
+}
+.f30 {
+    font-size: 30px;
+}
+.f46 {
+    font-size: 46px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.f60 {
+    font-size: 60px;
+    padding-top: 120px;
+    text-transform: uppercase;
+}
+.f72 {
+    font-size: 72px;
+    text-transform: uppercase;
+}
+.f130 {
+    color: #D2EDF7;
+    font-size: 130px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+}
+.qs {
+    font-family: 'QuillineScriptThin', Arial, Helvetica, sans-serif;
+}
+.kr {
+    font-family: 'KristonITC', Arial, Helvetica, sans-serif;
+}
+.cf {
+    font-family: 'ChunkFiveRegular', Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.krl {
+    font-family: 'KristonITC', Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* MAIN PAGE */
+.banner {
+    padding: 0;
+    height: 300px;
+    overflow: hidden;
+    background: url(../../asset/img/banner.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+.banner h2 {
+    margin: 0;
+    padding: 150px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+
+    -webkit-transition: all 1.6s ease-in-out;
+    -o-transition: all 1.6s ease-in-out;
+    transition: all 1.6s ease-in-out;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.banner .show {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+.center-content {
+    margin: 20px auto;
+    width: 300px;
+    text-align: left;
+}
+#main .center-content h1 {
+    font-size: 24px;
+}
+#main .center-content dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+#main .center-content dd {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/* -----方块格子区域，当然是想象中的----- */
+.things {
+    margin: 150px auto;
+    width: 800px;
+    text-align: left;
+}
+.things .box {
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 5px dashed #DDD;
+    margin: 10px;
+}
+.things .box a:hover {
+    text-decoration: underline;
+}
+.things .box figure a {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+}
+.things .box figure a:hover {
+    background-color: #6DF;
+    color: #eee;
+}
+.things .box img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.things .box p {
+    color: gray;
+    padding: 10px 20px;
+}
+.things .box p a {
+    line-height: 25px;
+    padding: 10px;
+}
+.box-model {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: strech;
+    text-align: center;
+}
+.box-model .box {
+    flex: 1 200px;
+}
+
+/** Heart Style **/
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius:50px 50px 0 0;
+    border-radius:50px 50px 0 0;
+    -webkit-transform:rotate( -45deg );
+    -moz-transform:rotate( -45deg );
+    -ms-transform:rotate( -45deg );
+    -o-transform:rotate( -45deg );
+    transform:rotate( -45deg );
+
+    -webkit-transform-origin:0 100%;
+    -moz-transform-origin:0 100%;
+    -ms-transform-origin:0 100%;
+    -o-transform-origin:0 100%;
+    transform-origin:0 100%;
+}
+
+.heart:after {
+    left: 0;
+    -webkit-transform:rotate( 45deg );
+    -moz-transform:rotate( 45deg );
+    -ms-transform:rotate( 45deg );
+    -o-transform:rotate( 45deg );
+    transform:rotate( 45deg );
+
+    -webkit-transform-origin:100% 100%;
+    -moz-transform-origin:100% 100%;
+    -ms-transform-origin:100% 100%;
+    -o-transform-origin:100% 100%;
+    transform-origin:100% 100%;
+}
+
+@media (max-width:480px) {
+    body {
+        font-size: 14px;
+    }
+    .banner h2 {
+        padding: 40px 0;
+    }
+    nav ul {
+        padding: 0 20px;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+    nav li {
+        display: block;
+        text-align: left;
+        border-bottom: 1px dotted #fff;
+    }
+    #main .center-content {
+        width: auto;
+        padding: 0 20px;
+    }
+    #main .center-content dt {
+        font-size: 18px;
+    }
+    #main .center-content dd {
+        font-size: 16px;
+    }
+    #main .center-content dd a {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    .break {
+        display: none;
+    }
+    .things {
+        margin: 0;
+        width: 100%;
+    }
+    .things .box-model {
+        display: block;
+    }
+}
+@media only screen and (min-device-pixel-ratio:2) {
+    body nav li {
+        display: block;
+    }
+}
+
+#return-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}

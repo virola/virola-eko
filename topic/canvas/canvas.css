@@ -1,0 +1,26 @@
+body {
+    color: #555;
+    margin: 0;
+    padding: 0;
+    font: 13px/18px "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+div, p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    clear: both;
+    text-align: right;
+    line-height: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#Canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

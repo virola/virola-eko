@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>show me stars</title>
+<style type="text/css">
+body {
+    background: #1A3742;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1A3742), to(#9EA183));
+    background-image: -webkit-linear-gradient(top, #1A3742, #9EA183);
+    background-image: -moz-linear-gradient(top, #1A3742, #9EA183);
+    background-image: -ms-linear-gradient(top, #1A3742, #9EA183);
+    background-image: -o-linear-gradient(top, #1A3742, #9EA183);
+}
+</style>
+</head>
+<body>
+    <canvas id="canvasElement"></canvas>
+
+    <script src="star.js"></script>
+    <script>
+
+        var canvas = document.getElementById("canvasElement");
+        var points = [], width = canvas.width, height = canvas.height, intsy;
+        var MAX_DIST_2 = 100 * 100;
+        var circRadius = 4;
+        if (canvas && canvas.getContext) {
+            var context = canvas.getContext("2d");
+            Initialize();
+        }
+    </script>
+</body>
+</html>
