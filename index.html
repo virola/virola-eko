@@ -112,7 +112,7 @@
 
 <a id="return-top" href="#"><i class="fa fa-arrow-up"></i></a>
 <footer id="footer">
-&copy;2013-2016. Virola&nbsp;<i class="fa fa-smile-o"></i>
+&copy;2013-2018. Virola&nbsp;<i class="fa fa-smile-o"></i>
 <br>
 <sub>湘ICP备15010409号-1</sub>
 </footer>
@@ -132,9 +132,7 @@ $(function () {
     });
 
     $('.banner h2').on('click', function () {
-        $(document.body).animate({
-            'scrollTop': winHeight - navH + 'px'
-        });
+        $('nav').get(0).scrollIntoView();
     });
 
     // return top icon
