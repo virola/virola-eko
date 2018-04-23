@@ -138,7 +138,7 @@ $(function () {
     // return top icon
     var topBtn = $('#return-top').hide();
     topBtn.on('click', function () {
-        $(document.body).animate({
+        $('html, body').animate({
             'scrollTop': 0
         });
         return false;
