@@ -25,7 +25,7 @@
 
     <ul class="krl">
         <li><a href="http://wedding.virola-eko.com/"><i class="fa fa-heart"></i>&nbsp;7&amp;V Love</a><span class="break">~</span></li>
-        <li><a href="http://blog.zhuyuwei.cn/"><i class="fa fa-book"></i>&nbsp;My Minds</a><span class="break">~</span></li>
+        <li><a href="http://zhuyuwei.cn/"><i class="fa fa-book"></i>&nbsp;My Minds</a><span class="break">~</span></li>
         <li><a href="life/loveday.html">Your Eyes</a><span class="break">~</span></li>
         <li><a href="life/wedding-invite/index.html"><i class="fa fa-book"></i>&nbsp;Our Memories</a></li>
     </ul>
@@ -73,7 +73,7 @@
             <figure>
                 <a target="_blank" href="#">
                     <figcaption>My first Phonegap App&nbsp;<i class="fa fa-android"></i>&nbsp;</figcaption>
-                    <img class="lazy" src="http://wedding.virola-eko.com/plugins/system/lazyloadforjoomla/assets/images/blank.gif" data-src="./asset/img/phonegap.jpg">
+                    <img class="lazy" src="//wedding.virola-eko.com/plugins/system/lazyloadforjoomla/assets/images/blank.gif" data-src="./asset/img/phonegap.jpg">
                 </a>
             </figure>
             <p>
@@ -117,8 +117,8 @@
 <sub>湘ICP备15010409号-1</sub>
 </footer>
 
-<script src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
-<script type="text/javascript" src="http://wedding.virola-eko.com/plugins/system/lazyloadforjoomla/assets/js/lazyloadforjoomla-jquery.js"></script>
+<script src="dep/jquery-1.10.2.min_f2fb5194.js"></script>
+<script type="text/javascript" src="//wedding.virola-eko.com/plugins/system/lazyloadforjoomla/assets/js/lazyloadforjoomla-jquery.js"></script>
 <script type="text/javascript">jQuery(document).ready(function() {jQuery('img.lazy').lazyload();});</script>
 <script>
 $(function () {
@@ -144,7 +144,7 @@ $(function () {
         return false;
     });
     $(window).on('scroll', function () {
-        var scrollTop = $(document.body).scrollTop();
+        var scrollTop = $('html, body').scrollTop();
         if (scrollTop > 100) {
             topBtn.fadeIn();
         }
