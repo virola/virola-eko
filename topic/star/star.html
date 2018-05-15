@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>show me stars</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <style type="text/css">
 body {
     background: #1A3742;
@@ -20,12 +21,12 @@ body {
     <script src="star.js"></script>
     <script>
 
-        var canvas = document.getElementById("canvasElement");
+        var canvas = document.getElementById('canvasElement');
         var points = [], width = canvas.width, height = canvas.height, intsy;
         var MAX_DIST_2 = 100 * 100;
         var circRadius = 4;
         if (canvas && canvas.getContext) {
-            var context = canvas.getContext("2d");
+            var context = canvas.getContext('2d');
             Initialize();
         }
     </script>

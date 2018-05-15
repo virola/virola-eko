@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>IMG grab</title>
+</head>
+<body>
+
+
+<div id="trace"></div>
+<script>
+//1，匹配出图片img标签（即匹配出所有图片），过滤其他不需要的字符
+//2.从匹配出来的结果（img标签中）循环匹配出图片地址（即src属性）
+var str = document.body.innerHTML;
+
+//匹配图片（g表示匹配所有结果i表示区分大小写）
+var imgReg = /<img.*?(?:>|\/>)/gi;
+//匹配src属性
+var srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
+var arr = str.match(imgReg);
+console.log('已成功匹配图片数：', arr.length);
+for (var i = 0; i < arr.length; i++) {
+    var src = arr[i].match(srcReg);
+    //获取图片地址
+    if (src[1]) {
+      console.log('已匹配的图片地址'+(i+1)+'：'+src[1]);
+    }
+}
+</script>
+</body>
+</html>

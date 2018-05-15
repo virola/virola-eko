@@ -2,8 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <title>CSS波浪效果</title>
 <link rel="stylesheet" href="bubble.css">
+<link rel="stylesheet" href="wave.css">
 </head>
 <style>
 .box {
@@ -27,14 +29,19 @@
 }
 .wave-box {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    /*width: 100%;*/
     background-color: #22ACBE;
     height: 50%;
     -webkit-transition: height .3s;
     -o-transition: height .3s;
     transition: height .3s;
+
+    -webkit-animation: wave 5s linear both infinite;
+    -o-animation: wave 5s linear both infinite;
+    animation: wave 5s linear both infinite;
     /*-webkit-animation: go-up 6s linear both;
     -o-animation: go-up 6s linear both;
     animation: go-up 6s linear both;*/

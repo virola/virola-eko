@@ -154,6 +154,9 @@ a:hover {
     width: 800px;
     text-align: left;
 }
+.things h2 {
+    text-align: center;
+}
 .things .box {
     font-size: 20px;
     border-radius: 20px;

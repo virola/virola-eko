@@ -13,11 +13,11 @@ $data = json_decode($filedata, true);
 <title><?php echo $data['name'] ?></title>
 <meta name="keywords" content="诗集" />
 <meta name="description" content="<?php echo $data['description'] ?>" />
-<link rel="stylesheet" type="text/css" href="../../dep/swiper/dist/idangerous.swiper.css">
+<meta name="date" content="2018-05-15"/>
+<link href="https://cdn.bootcss.com/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
+<link rel="stylesheet" href="asset/css/animate.min.css">
 <link rel="stylesheet" type="text/css" href="asset/css/base.css">
 <link rel="stylesheet" type="text/css" href="asset/css/vertical.css">
-<!-- animation -->
-<link rel="stylesheet" type="text/css" href="asset/css/animate.css">
 </head>
 <body>
 <div class="main">
@@ -40,9 +40,11 @@ $data = json_decode($filedata, true);
             </section>
             <?php } ?>
         </div>
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
     </div>
-    <div class="pagination"></div>
-
     
     <!-- arrow -->
     <img class="arrow-v arrowing" src="asset/img/v_arrow.png" >
@@ -50,38 +52,59 @@ $data = json_decode($filedata, true);
 
 
 <!-- music -->
-<audio id="music" loop="loop" autoplay src="http://virola.qiniudn.com/memorize.mp3"></audio>
+<audio id="music" loop="loop" src="https://pic.ibaotu.com/00/31/69/006888piC4eQ.mp3"></audio>
 <img id="music-switch-on" class="music-switcher" src="http://virola-eko.com/asset/music/img/music-on.png" alt="">
 <img id="music-switch-off" class="music-switcher" src="http://virola-eko.com/asset/music/img/music-off.png" alt="">
 
-<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-6/esl.min.js"></script>
-<script src="asset/js/effect.js"></script>
-
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.2.6/js/swiper.min.js"></script>
+<script src="asset/js/swiper.animate1.0.3.min.js"></script>
 <script>
+function initMusic() {
+    var music = document.getElementById('music');
 
-    var pageParams = {};
+    var onBtn = document.getElementById('music-switch-on');
+    var offBtn = document.getElementById('music-switch-off');
 
-    require.config({
-        baseUrl: 'asset/js',
-        paths: {
-            'jquery': '//s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194',
-            'swiper': '../../../../dep/swiper/dist/idangerous.swiper',
-            'swiper-smooth-progress': '../../../../dep/swiper/plugin/idangerous.swiper.progress.amd.min',
-            'util': '//virola-eko.com/topic/magazine/asset/js/util'
+    offBtn.style.display = 'none';
+
+    onBtn.addEventListener('click', function () {
+        offBtn.style.display = 'block';
+        onBtn.style.display = 'none';
+        music.pause();
+    }, false);
+
+    offBtn.addEventListener('click', function () {
+        onBtn.style.display = 'block';
+        offBtn.style.display = 'none';
+        music.play();
+    }, false);
+}
+
+$(function () {
+    const effects = [
+        'slide', 'fade', 'cube', 'coverflow', 'flip'
+    ];
+    $('#slide').width($(window).width()).height($(window).height());
+
+    var slider = new Swiper('.swiper-container', {
+        loop: true,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
         },
-        urlArgs: 'v=20141121'
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        mode: 'vertical',
+        effect: effects[Math.floor(effects.length * Math.random())]
     });
-
-    require(['jquery', 'util', 'main'], function ($, util, main) {
-
-        main.start($.extend({
-            mode: 'horizontal',
-            loop: 1,
-            progress: true
-        }, effects[Math.floor(Math.random() * effects.length)]));
-    });
+    initMusic();
+});
 </script>
 
-<script src="http://static.virola-eko.com/asset/statics.js"></script>
+<script src="../../asset/statics.js"></script>
 </body>
 </html>
