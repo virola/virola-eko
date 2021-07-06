@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3毛玻璃样式</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .bg {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: url(./img/image.jpeg) center no-repeat;
+        background-size: cover;
+        display: flex;
+      }
+
+      .bg > div {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 36px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: auto;
+        color: #fff;
+      }
+
+      .bg .g-filter {
+        filter: blur(6px);
+      }
+
+      .bg .g-backdrop-filter {
+        backdrop-filter: blur(6px);
+      }
+      /* 使用CSS元素叠加的毛玻璃效果 */
+      .g-glossy {
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      .g-glossy::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(./img/image.jpeg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: top;
+        filter: blur(10px);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div>Normal</div>
+      <div class="g-filter">filter</div>
+      <div class="g-backdrop-filter">backdrop-filter</div>
+      <div class="g-glossy">frosted glass effect</div>
+    </div>
+
+    <!-- 作者：chokcoco
+链接：https://juejin.cn/post/6979391400844460068
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 -->
+  </body>
+</html>
