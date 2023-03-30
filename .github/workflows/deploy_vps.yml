@@ -1,0 +1,23 @@
+name: deploy_vps
+on:
+  # 手动触发
+  workflow_dispatch:
+  # nothing
+  push:
+    branches: [master]
+
+jobs:
+  build: # 任务的job_id，具体名称自定义，这里build代表打包
+    runs-on: ubuntu-latest # runs-on字段指定运行所需要的虚拟机环境。注意：这个是必填字段
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.USER_NAME }}
+          server: ${{ secrets.SERVER_HOST }}
+          ssh_private_key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          local_path: "./*"
+          remote_path: "/root/html/virola-eko"
+          sftpArgs: "-o ConnectTimeout=5"
